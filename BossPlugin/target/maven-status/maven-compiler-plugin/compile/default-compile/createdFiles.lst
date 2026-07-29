@@ -1,1 +1,7 @@
+com/bossplugin/listeners/BossListener.class
+com/bossplugin/boss/CustomBoss$1.class
+com/bossplugin/boss/BossManager.class
+com/bossplugin/commands/BossCommand.class
+com/bossplugin/boss/BossAbility.class
+com/bossplugin/boss/CustomBoss.class
 com/bossplugin/BossPlugin.class

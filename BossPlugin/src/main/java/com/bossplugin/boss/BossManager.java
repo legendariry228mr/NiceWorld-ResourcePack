@@ -2,6 +2,7 @@ package com.bossplugin.boss;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -29,7 +30,7 @@ public class BossManager {
         );
         
         ItemStack[] fireLordEquipment = new ItemStack[6];
-        fireLordEquipment[0] = new ItemStack(Material.FLAMING_SWORD);
+        fireLordEquipment[0] = new ItemStack(Material.NETHERITE_SWORD);
         fireLordEquipment[2] = new ItemStack(Material.GOLDEN_HELMET);
         fireLordEquipment[3] = new ItemStack(Material.GOLDEN_CHESTPLATE);
         fireLordEquipment[4] = new ItemStack(Material.GOLDEN_LEGGINGS);
@@ -102,8 +103,8 @@ public class BossManager {
             darkKnightAbilities,
             darkKnightEquipment,
             Arrays.asList(
-                new PotionEffect(PotionEffectType.RESISTANCE, Integer.MAX_VALUE, 1),
-                new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, 1)
+                new PotionEffect(PotionEffectType.getByName("RESISTANCE"), Integer.MAX_VALUE, 1),
+                new PotionEffect(PotionEffectType.getByName("STRENGTH"), Integer.MAX_VALUE, 1)
             )
         );
         bossTemplates.put("darkknight", darkKnight);
@@ -160,8 +161,8 @@ public class BossManager {
             ancientWardenAbilities,
             ancientWardenEquipment,
             Arrays.asList(
-                new PotionEffect(PotionEffectType.RESISTANCE, Integer.MAX_VALUE, 2),
-                new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, 2)
+                new PotionEffect(PotionEffectType.getByName("RESISTANCE"), Integer.MAX_VALUE, 2),
+                new PotionEffect(PotionEffectType.getByName("STRENGTH"), Integer.MAX_VALUE, 2)
             )
         );
         bossTemplates.put("ancientwarden", ancientWarden);
@@ -180,9 +181,9 @@ public class BossManager {
             getDamage(bossName),
             getSpeed(bossName),
             getArmor(bossName),
-            template.abilities,
-            template.equipment,
-            template.effects
+            template.getAbilities(),
+            template.getEquipment(),
+            template.getEffects()
         );
         
         LivingEntity entity = spawnedBoss.spawn(location);

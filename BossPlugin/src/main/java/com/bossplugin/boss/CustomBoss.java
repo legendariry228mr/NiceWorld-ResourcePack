@@ -163,4 +163,16 @@ public class CustomBoss {
         if (entity == null || entity.isDead()) return 0;
         return (entity.getHealth() / health) * 100;
     }
+    
+    public List<BossAbility> getAbilities() {
+        return new ArrayList<>(abilities);
+    }
+    
+    public ItemStack[] getEquipment() {
+        return Arrays.copyOf(equipment, equipment.length);
+    }
+    
+    public List<PotionEffect> getEffects() {
+        return new ArrayList<>(effects);
+    }
 }

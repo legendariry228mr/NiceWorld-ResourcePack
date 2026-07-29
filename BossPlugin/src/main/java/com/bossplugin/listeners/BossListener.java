@@ -131,7 +131,7 @@ public class BossListener implements Listener {
             }
         }
         
-        // Опыт
+        // Опыт будет добавлен через spawnExperienceOrb
         int expAmount = switch (bossName.toLowerCase().replaceAll("[^a-z]", "")) {
             case "firelord", "огненныйлорд" -> 500;
             case "stormtitan", "грозовойтитан" -> 600;
@@ -140,8 +140,6 @@ public class BossListener implements Listener {
             case "ancientwarden", "древнийстраж" -> 1000;
             default -> 300;
         };
-        
-        entity.setExpToDrop(expAmount);
     }
     
     private void applyBossEffect(Player player, LivingEntity boss) {
@@ -153,8 +151,8 @@ public class BossListener implements Listener {
                 player.sendMessage(ChatColor.RED + "🔥 Вас поджег Огненный Лорд!");
             }
             case "stormtitan", "грозовойтитан" -> {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 100, 2));
-                player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 1));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.getByName("SLOWNESS"), 100, 2));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.getByName("WEAKNESS"), 100, 1));
                 player.sendMessage(ChatColor.BLUE + "⚡ Грозовой Титан ослабил вас!");
             }
             case "darkknight", "темныйрыцарь" -> {
@@ -162,7 +160,7 @@ public class BossListener implements Listener {
                 player.sendMessage(ChatColor.DARK_PURPLE + "🌑 Темный Рыцарь ослепил вас!");
             }
             case "icequeen", "ледянаякоролева" -> {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 120, 3));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.getByName("SLOWNESS"), 120, 3));
                 player.setFreezeTicks(140);
                 player.sendMessage(ChatColor.AQUA + "❄️ Ледяная Королева заморозила вас!");
             }
