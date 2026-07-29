@@ -1,41 +1,68 @@
-```
-# Compiled and build artifacts
-*.class
-*.o
-*.obj
-*.out
+```yaml
+# Configuration file for GitHub Actions workflow
+!.github/workflows/build.yml
 
 # Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.egg-info/
+dist/
+build/
 target/
-.mypy_cache/
-.pytest_cache/
 .gradle/
+.cargo/
+.pip/
 
-# Logs and temp files
+# Logs and temporary files
 *.log
 *.tmp
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
+*.temp
 *.swp
 *.swo
-
-# System files
 .DS_Store
 Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# IDE specific
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.settings/
+.project
 
 # Coverage reports
 coverage/
 htmlcov/
 .coverage
+*.coverage
 
-# Compressed files
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+
+# Build outputs
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Archives
 *.zip
 *.gz
 *.tar
@@ -58,4 +85,21 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# Testing
+.mypy_cache/
+.pytest_cache/
+.nyc_output/
+istanbul/
+coverage/
+
+# OS generated
+*~
+.DS_Store
+ehthumbs.db
+Icon?
+apidoc/
+docs/_build/
+.svn/
+CVS/
 ```
