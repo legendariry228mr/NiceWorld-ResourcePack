@@ -1,0 +1,68 @@
+# BossPlugin Configuration
+# Настройки плагина BossPlugin
+
+# Включить сообщения о призыве боссов для всех игроков
+broadcast-boss-spawn: true
+
+# Включить сообщения о смерти боссов для всех игроков
+broadcast-boss-death: true
+
+# Шанс на критический удар по боссу (0.0 - 1.0)
+critical-hit-chance: 0.05
+
+# Шанс на особый эффект от атаки босса (0.0 - 1.0)
+boss-effect-chance: 0.15
+
+# Время между использованиями способностей босса (в тиках, 20 тиков = 1 секунда)
+ability-cooldown: 80
+
+# Задержка перед первой способностью босса после спавна (в тиках)
+initial-ability-delay: 100
+
+# Настройки боссов (переопределяют значения по умолчанию)
+bosses:
+  firelord:
+    health: 200.0
+    damage: 12.0
+    speed: 0.35
+    armor: 8
+    enabled: true
+    
+  stormtitan:
+    health: 250.0
+    damage: 15.0
+    speed: 0.4
+    armor: 10
+    enabled: true
+    
+  darkknight:
+    health: 300.0
+    damage: 18.0
+    speed: 0.3
+    armor: 12
+    enabled: true
+    
+  icequeen:
+    health: 180.0
+    damage: 10.0
+    speed: 0.45
+    armor: 6
+    enabled: true
+    
+  ancientwarden:
+    health: 500.0
+    damage: 25.0
+    speed: 0.25
+    armor: 15
+    enabled: true
+
+# Настройки наград
+rewards:
+  # Множитель опыта (1.0 = стандартный опыт)
+  exp-multiplier: 1.0
+  
+  # Включить выпадение предметов
+  enable-drops: true
+  
+  # Множитель количества предметов (1.0 = стандартное количество)
+  drop-multiplier: 1.0

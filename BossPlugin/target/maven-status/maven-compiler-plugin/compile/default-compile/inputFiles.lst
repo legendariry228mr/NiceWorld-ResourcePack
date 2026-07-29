@@ -1,0 +1,6 @@
+/workspace/BossPlugin/src/main/java/com/bossplugin/BossPlugin.java
+/workspace/BossPlugin/src/main/java/com/bossplugin/boss/BossAbility.java
+/workspace/BossPlugin/src/main/java/com/bossplugin/boss/BossManager.java
+/workspace/BossPlugin/src/main/java/com/bossplugin/boss/CustomBoss.java
+/workspace/BossPlugin/src/main/java/com/bossplugin/commands/BossCommand.java
+/workspace/BossPlugin/src/main/java/com/bossplugin/listeners/BossListener.java

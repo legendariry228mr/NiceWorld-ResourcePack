@@ -1,0 +1,24 @@
+name: BossPlugin
+version: '1.0.0'
+main: com.bossplugin.BossPlugin
+api-version: '1.21'
+description: Advanced Boss System like RealWorld for Minecraft 1.21.4 Paper
+author: BossPluginTeam
+
+commands:
+  boss:
+    description: Main boss command
+    usage: /<command> <spawn|list|kill|help>
+    permission: bossplugin.admin
+  summonboss:
+    description: Summon a boss at your location
+    usage: /<command> <bossName> [world] [x] [y] [z]
+    permission: bossplugin.admin
+
+permissions:
+  bossplugin.admin:
+    description: Admin access to boss commands
+    default: op
+  bossplugin.summon:
+    description: Can summon bosses
+    default: op
